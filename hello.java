@@ -1,4 +1,6 @@
 //Simple Java File to print out Hello World
+import java.util.Scanner;
+
 class User
 {
   private String fname, lname;
@@ -36,6 +38,19 @@ class Hello
 {
   public static void main(String args)
   {
-    System.out.println("Hello World");
+    Scanner sc = new Scanner(System.in);
+    User newUser = new User();
+   
+    System.out.println("Welcome new User...");
+    System.out.println("Please enter the following details");
+    System.out.print("First Name: ");
+    newUser.setFirstName(sc.nextLine());
+    System.out.print("Last Name: ");
+    newUser.setLastName(sc.nextLine());
+    System.out.print("Age: ");
+    newUser.setAge(Integer.parseInt(sc.nextLine()));
+    
+    System.out.println("The details entered are... ");
+    newUser.display();
   }
 }
