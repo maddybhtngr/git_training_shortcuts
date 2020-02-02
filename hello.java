@@ -11,6 +11,15 @@ class User
     this.age = age;
   }
   
+  public void setFirstName(String fname){this.fname = fname;}
+  public void setLastName(String lname){this.lname = lname;}
+  public void setName(String fname, String lname)
+  {
+    this.fname = fname;
+    this.lname = lname;
+  }
+  public void setAge(int age){this.age = age;}
+  
   public String getName(){return fname+" "+lname;}
   public String getFirstName(){return fname;}
   public String getLastName(){return lname;}
